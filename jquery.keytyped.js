@@ -31,6 +31,8 @@
     // and the keydown event. They should not be expected to (read: will not)
     // work for other events or other browsers. 
     
+    //TODO: test properly against IE. Chrome, Firefox, and Safari are pretty good.
+    
 
     $.fn.keyTyped = function(callback, options) {
         var opts = $.extend({}, $.fn.keyTyped.defaults, options);
@@ -49,6 +51,7 @@
             }
         
             if($.browser.mozilla){
+                //TODO: Implement autorepeat functionality for Mozilla...again.
                 $this.keypress(function(){return false;});
             }
     
